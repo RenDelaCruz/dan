@@ -1,6 +1,6 @@
 include .makefile.inc
 
-APP_URL = "http://localhost:3000/turnip-stalker"
+APP_URL = "http://localhost:3000/dan"
 
 ## Starts app in development mode
 start:
@@ -27,6 +27,10 @@ safari:
 ## Opens the local project in Chrome
 chrome:
 	open -a Google\ Chrome ${APP_URL}
+
+## Opens the project on GitHub Pages
+online:
+	open -a Google\ Chrome https://rendelacruz.github.io/dan/
 
 ## Other commands
 
