@@ -1,15 +1,17 @@
 {
   "files": {
     "main.css": "/dan/static/css/main.e6c13ad2.css",
-    "main.js": "/dan/static/js/main.75d8cd1a.js",
+    "main.js": "/dan/static/js/main.ed106cff.js",
     "static/js/787.0537d1f0.chunk.js": "/dan/static/js/787.0537d1f0.chunk.js",
+    "static/media/DanialEndrawes_Resume.pdf": "/dan/static/media/DanialEndrawes_Resume.15e75b433f9707d92cb7.pdf",
+    "static/media/dg-logo.png": "/dan/static/media/dg-logo.0ca0fdba8d5b1016d893.png",
     "index.html": "/dan/index.html",
     "main.e6c13ad2.css.map": "/dan/static/css/main.e6c13ad2.css.map",
-    "main.75d8cd1a.js.map": "/dan/static/js/main.75d8cd1a.js.map",
+    "main.ed106cff.js.map": "/dan/static/js/main.ed106cff.js.map",
     "787.0537d1f0.chunk.js.map": "/dan/static/js/787.0537d1f0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.75d8cd1a.js"
+    "static/js/main.ed106cff.js"
   ]
 }
