@@ -1,7 +1,11 @@
 import { AppShell, ColorScheme, ColorSchemeProvider, MantineProvider } from '@mantine/core';
 import React, { useState } from 'react';
-import HeaderResponsive from './HeaderResponsive';
-import HeroAbout from './HeroAbout';
+import Contact from './Contact';
+import Experience from './Experience';
+import Footer from './Footer';
+import HeaderResponsive from './Header';
+import Hero from './Hero';
+import Portfolio from './Portfolio';
 
 function App() {
   const [colorScheme, setColorScheme] = useState<ColorScheme>('light');
@@ -19,7 +23,11 @@ function App() {
         withGlobalStyles
       >
         <AppShell navbarOffsetBreakpoint='sm' fixed header={<HeaderResponsive />}>
-          <HeroAbout />
+          <Hero />
+          <Portfolio />
+          <Experience />
+          <Contact />
+          <Footer />
         </AppShell>
       </MantineProvider>
     </ColorSchemeProvider>

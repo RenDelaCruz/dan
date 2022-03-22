@@ -18,23 +18,19 @@ const HEADER_HEIGHT = 60;
 
 const appLinks = [
   {
-    link: '/a',
-    label: 'Intro',
+    link: 'home',
+    label: 'Home',
   },
   {
-    link: '/v',
-    label: 'About',
-  },
-  {
-    link: '/a2',
-    label: 'Work Experience',
-  },
-  {
-    link: '/a3',
+    link: 'portfolio',
     label: 'Portfolio',
   },
   {
-    link: '/a4',
+    link: 'experience',
+    label: 'Experience',
+  },
+  {
+    link: 'contact',
     label: 'Contact',
   },
 ];
@@ -135,6 +131,9 @@ function HeaderResponsive({ links = appLinks }: HeaderResponsiveProps) {
         event.preventDefault();
         setActive(link.link);
         toggleOpened(false);
+
+        const section = document.getElementById(link.link);
+        section?.scrollIntoView({ behavior: 'smooth' });
       }}
     >
       {link.label}
@@ -166,7 +165,7 @@ function HeaderResponsive({ links = appLinks }: HeaderResponsiveProps) {
 
         <Transition transition='pop-top-right' duration={200} mounted={opened}>
           {styles => (
-            <Paper className={classes.dropdown} withBorder style={styles}>
+            <Paper className={classes.dropdown} withBorder style={styles} shadow='sm'>
               {items}
             </Paper>
           )}

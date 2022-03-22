@@ -6,7 +6,7 @@ import {
   List,
   Text,
   ThemeIcon,
-  useMantineTheme
+  useMantineTheme,
 } from '@mantine/core';
 import React from 'react';
 import { Check } from 'tabler-icons-react';
@@ -27,8 +27,8 @@ const useStyles = createStyles(theme => ({
     paddingBottom: 60,
 
     [BREAKPOINT]: {
-      paddingBottom: 20,
       paddingTop: 0,
+      paddingBottom: 20,
     },
   },
 
@@ -59,7 +59,7 @@ const useStyles = createStyles(theme => ({
     marginTop: theme.spacing.xl * 2,
 
     [BREAKPOINT]: {
-      marginTop: theme.spacing.xl,
+      marginTop: theme.spacing.xl * 2,
     },
   },
 
@@ -94,7 +94,7 @@ function HeroAbout() {
   const theme = useMantineTheme();
 
   return (
-    <div className={classes.wrapper}>
+    <div id='home' className={classes.wrapper}>
       <Container size={700} className={classes.inner}>
         <Text className={classes.description}>Hi, my name is</Text>
 
@@ -104,7 +104,7 @@ function HeroAbout() {
             component='span'
             // variant='gradient'
             // gradient={{ from: 'red', to: 'red' }}
-            color={theme.colors.red[theme.colorScheme === 'dark' ? 8 : 6]}
+            color={theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 8 : 6]}
             inherit
           >
             Endrawes
