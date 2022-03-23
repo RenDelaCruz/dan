@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/dan/static/css/main.80c9d211.css",
-    "main.js": "/dan/static/js/main.8618cb8b.js",
+    "main.css": "/dan/static/css/main.3ef1dd8a.css",
+    "main.js": "/dan/static/js/main.a7e2dba6.js",
     "static/js/787.0537d1f0.chunk.js": "/dan/static/js/787.0537d1f0.chunk.js",
     "static/media/DanialEndrawes_Resume.pdf": "/dan/static/media/DanialEndrawes_Resume.15e75b433f9707d92cb7.pdf",
-    "static/media/vag_rundschrift_d.ttf": "/dan/static/media/vag_rundschrift_d.9058bf0781fc1c4b5b19.ttf",
     "static/media/dg-logo.png": "/dan/static/media/dg-logo.0ca0fdba8d5b1016d893.png",
     "static/media/VAGRundschriftD.woff": "/dan/static/media/VAGRundschriftD.40f21a57b21f8bdc58b7.woff",
+    "static/media/VAGRundschriftDLight.woff": "/dan/static/media/VAGRundschriftDLight.d1338cce148a0e8a8d81.woff",
     "index.html": "/dan/index.html",
-    "main.80c9d211.css.map": "/dan/static/css/main.80c9d211.css.map",
-    "main.8618cb8b.js.map": "/dan/static/js/main.8618cb8b.js.map",
+    "main.3ef1dd8a.css.map": "/dan/static/css/main.3ef1dd8a.css.map",
+    "main.a7e2dba6.js.map": "/dan/static/js/main.a7e2dba6.js.map",
     "787.0537d1f0.chunk.js.map": "/dan/static/js/787.0537d1f0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.80c9d211.css",
-    "static/js/main.8618cb8b.js"
+    "static/css/main.3ef1dd8a.css",
+    "static/js/main.a7e2dba6.js"
   ]
 }
