@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/dan/static/css/main.3ef1dd8a.css",
-    "main.js": "/dan/static/js/main.a7e2dba6.js",
+    "main.css": "/dan/static/css/main.170b3354.css",
+    "main.js": "/dan/static/js/main.0ed426f5.js",
     "static/js/787.0537d1f0.chunk.js": "/dan/static/js/787.0537d1f0.chunk.js",
     "static/media/DanialEndrawes_Resume.pdf": "/dan/static/media/DanialEndrawes_Resume.15e75b433f9707d92cb7.pdf",
-    "static/media/dg-logo.png": "/dan/static/media/dg-logo.0ca0fdba8d5b1016d893.png",
     "static/media/VAGRundschriftD.woff": "/dan/static/media/VAGRundschriftD.40f21a57b21f8bdc58b7.woff",
     "static/media/VAGRundschriftDLight.woff": "/dan/static/media/VAGRundschriftDLight.d1338cce148a0e8a8d81.woff",
+    "static/media/dg-white.svg": "/dan/static/media/dg-white.d149b9cbfa4a4d7b7cb6ed4212dd456c.svg",
+    "static/media/dg-black.svg": "/dan/static/media/dg-black.c1ceac2eaff8024d520795315e8f7789.svg",
     "index.html": "/dan/index.html",
-    "main.3ef1dd8a.css.map": "/dan/static/css/main.3ef1dd8a.css.map",
-    "main.a7e2dba6.js.map": "/dan/static/js/main.a7e2dba6.js.map",
+    "main.170b3354.css.map": "/dan/static/css/main.170b3354.css.map",
+    "main.0ed426f5.js.map": "/dan/static/js/main.0ed426f5.js.map",
     "787.0537d1f0.chunk.js.map": "/dan/static/js/787.0537d1f0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3ef1dd8a.css",
-    "static/js/main.a7e2dba6.js"
+    "static/css/main.170b3354.css",
+    "static/js/main.0ed426f5.js"
   ]
 }
