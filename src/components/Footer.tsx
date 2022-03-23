@@ -1,10 +1,10 @@
-import { ActionIcon, Container, createStyles, Group, Text } from '@mantine/core';
+import { ActionIcon, Container, createStyles, Group, MediaQuery, Text } from '@mantine/core';
 import React from 'react';
 import { BrandInstagram, BrandTwitter, BrandYoutube } from 'tabler-icons-react';
 
 const useStyles = createStyles(theme => ({
   footer: {
-    marginTop: 120,
+    marginTop: 70,
     borderTop: `1px solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2]
     }`,
@@ -36,7 +36,16 @@ function Footer() {
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
-        <Text>© Danial Endrawes 2022. Made with mantine.dev by RDC.</Text>
+        <MediaQuery largerThan='xs' styles={{ display: 'none' }}>
+          <div style={{textAlign: 'center'}}>
+            <Text>© Danial Endrawes 2022.</Text>
+            <Text>Made with mantine.dev by RDC.</Text>
+          </div>
+        </MediaQuery>
+        <MediaQuery smallerThan='xs' styles={{ display: 'none' }}>
+          <Text>© Danial Endrawes 2022. Made with mantine.dev by RDC.</Text>
+        </MediaQuery>
+
         <Group spacing={0} className={classes.links} position='right' noWrap>
           <ActionIcon size='lg'>
             <BrandTwitter size={18} />
