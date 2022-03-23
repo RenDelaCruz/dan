@@ -1,18 +1,25 @@
 import { createStyles, Divider } from '@mantine/core';
 import React from 'react';
 
-// TODO: Delete this
-
 const BREAKPOINT = '@media (max-width: 755px)';
 
 const useStyles = createStyles(theme => ({
   title: {
-    paddingTop: 10,
-    paddingBottom: 20,
+    paddingTop: 60,
+    paddingBottom: 30,
 
     [BREAKPOINT]: {
       paddingTop: 40,
       paddingBottom: 30,
+    },
+  },
+
+  noPadding: {
+    paddingTop: 0,
+    paddingBottom: 30,
+
+    [theme.fn.smallerThan('sm')]: {
+      paddingTop: 40,
     },
   },
 
@@ -24,13 +31,15 @@ const useStyles = createStyles(theme => ({
 }));
 
 interface SectionProps {
+  noPadding?: boolean;
   children: string;
 }
 
-function SectionTitle({ children }: SectionProps) {
+function SectionTitle({ noPadding, children }: SectionProps) {
   const { classes } = useStyles();
 
   return (
+    // <div className={noPadding ? classes.noPadding : classes.title}></div>
     <div className={classes.title}>
       <Divider className={classes.line} />
       <h1 style={{ marginTop: 1, marginBottom: 1 }}>{children}</h1>

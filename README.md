@@ -13,4 +13,5 @@ https://rendelacruz.github.io/dan/
 
 ### Backlog
 
+- Remove .ttf font
 - Experiences -> use map

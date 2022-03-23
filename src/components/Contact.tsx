@@ -12,6 +12,7 @@ import {
 } from '@mantine/core';
 import React from 'react';
 import { BrandInstagram, BrandTwitter, BrandYoutube } from 'tabler-icons-react';
+import SectionTitle from './SectionTitle';
 // import { ContactIconsList } from '../ContactIcons/ContactIcons';
 
 const useStyles = createStyles(theme => ({
@@ -90,7 +91,7 @@ function Contact() {
   ));
   return (
     <Container id='contact' size={900}>
-      <h1>Contact</h1>
+      <SectionTitle>Contact</SectionTitle>
       <div className={classes.wrapper}>
         <SimpleGrid cols={2} spacing={50} breakpoints={[{ maxWidth: 'sm', cols: 1 }]}>
           <div>

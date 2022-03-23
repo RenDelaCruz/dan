@@ -1,5 +1,7 @@
-import { AppShell, ColorScheme, ColorSchemeProvider, MantineProvider } from '@mantine/core';
+import { AppShell, ColorScheme, ColorSchemeProvider, Global, MantineProvider } from '@mantine/core';
 import React, { useState } from 'react';
+import fontNormal from '../assets/VAGRundschriftD.woff';
+import fontLight from '../assets/VAGRundschriftDLight.woff';
 import Contact from './Contact';
 import Experience from './Experience';
 import Footer from './Footer';
@@ -15,10 +17,31 @@ function App() {
 
   return (
     <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
+      <Global
+        styles={[
+          {
+            '@font-face': {
+              fontFamily: 'Vag Rundschrift D',
+              src: `url('${fontNormal}') format("woff")`,
+              fontWeight: 'bold',
+              fontStyle: 'normal',
+            },
+          },
+          {
+            '@font-face': {
+              fontFamily: 'Vag Rundschrift D Light',
+              src: `url('${fontLight}') format("woff")`,
+              fontWeight: 'normal',
+              fontStyle: 'normal',
+            },
+          },
+        ]}
+      />
       <MantineProvider
         theme={{
           colorScheme: colorScheme,
           primaryColor: 'red',
+          fontFamily: 'VAG Rundschrift D Light, sans-serif',
         }}
         withGlobalStyles
       >
@@ -27,8 +50,8 @@ function App() {
           <Portfolio />
           <Experience />
           <Contact />
-          <Footer />
         </AppShell>
+        <Footer />
       </MantineProvider>
     </ColorSchemeProvider>
   );

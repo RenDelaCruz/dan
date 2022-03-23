@@ -8,10 +8,13 @@ import {
   Paper,
   Text,
   Transition,
+  useMantineTheme,
 } from '@mantine/core';
 import { useBooleanToggle } from '@mantine/hooks';
 import React, { useState } from 'react';
-import dgLogo from '../assets/dg-logo.png';
+import { scrollIntoView } from 'seamless-scroll-polyfill';
+import dgBlack from '../assets/dg-black.svg';
+import dgWhite from '../assets/dg-white.svg';
 import SwitchToggle from './SwitchToggle';
 
 const HEADER_HEIGHT = 60;
@@ -121,6 +124,7 @@ function HeaderResponsive({ links = appLinks }: HeaderResponsiveProps) {
   const [opened, toggleOpened] = useBooleanToggle(false);
   const [active, setActive] = useState(links[0].link);
   const { classes, cx } = useStyles();
+  const theme = useMantineTheme();
 
   const items = links.map(link => (
     <a
@@ -133,7 +137,9 @@ function HeaderResponsive({ links = appLinks }: HeaderResponsiveProps) {
         toggleOpened(false);
 
         const section = document.getElementById(link.link);
-        section?.scrollIntoView({ behavior: 'smooth' });
+        if (section) {
+          scrollIntoView(section, { behavior: 'smooth' });
+        }
       }}
     >
       {link.label}
@@ -144,7 +150,7 @@ function HeaderResponsive({ links = appLinks }: HeaderResponsiveProps) {
     <Header height={HEADER_HEIGHT} mb={120} className={classes.root}>
       <Container className={classes.header}>
         <Group spacing='xs'>
-          <Image width={35} src={dgLogo} alt='DG Logo' />
+          <Image width={25} src={theme.colorScheme === 'dark' ? dgWhite : dgBlack} alt='DG' />
           <Text size='xl'>Danial Endrawes</Text>
         </Group>
 

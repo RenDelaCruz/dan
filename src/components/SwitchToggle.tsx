@@ -34,7 +34,8 @@ function SwitchToggle() {
 
   // Update browser meta theme-color on button toggle
   const themeColor = document.querySelector("meta[name='theme-color']");
-  themeColor?.setAttribute('content', colorScheme === 'dark' ? '#1A1B1E' : '#FFFFFF');
+  themeColor?.setAttribute('content', colorScheme === 'dark' ? '#B13535' : '#E85E59');
+  // themeColor?.setAttribute('content', colorScheme === 'dark' ? '#1A1B1E' : '#FFFFFF');
 
   return (
     <Group position='center' my={30}>

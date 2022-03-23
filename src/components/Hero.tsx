@@ -19,6 +19,10 @@ const useStyles = createStyles(theme => ({
     position: 'relative',
     boxSizing: 'border-box',
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
+
+    // [theme.fn.largerThan('sm')]: {
+    //   minHeight: 'max(100vh, 700px)',
+    // },
   },
 
   inner: {
@@ -33,7 +37,7 @@ const useStyles = createStyles(theme => ({
   },
 
   title: {
-    fontSize: 62,
+    fontSize: 80,
     fontWeight: 900,
     lineHeight: 1.1,
     margin: 0,
@@ -41,7 +45,7 @@ const useStyles = createStyles(theme => ({
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
 
     [BREAKPOINT]: {
-      fontSize: 42,
+      fontSize: 60,
       lineHeight: 1.2,
     },
   },
