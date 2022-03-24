@@ -9,7 +9,6 @@ import {
   useMantineTheme,
 } from '@mantine/core';
 import React from 'react';
-import { scrollIntoView } from 'seamless-scroll-polyfill';
 import { Check } from 'tabler-icons-react';
 import resume from '../assets/DanialEndrawes_Resume.pdf';
 
@@ -19,7 +18,6 @@ const useStyles = createStyles(theme => ({
   wrapper: {
     position: 'relative',
     boxSizing: 'border-box',
-    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
 
     // [theme.fn.largerThan('sm')]: {
     //   minHeight: 'max(100vh, 700px)',

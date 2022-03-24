@@ -24,3 +24,18 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  .spinner {
+    animation: icon-spin infinite 60s linear;
+  }
+}
+
+@keyframes icon-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

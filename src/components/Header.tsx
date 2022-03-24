@@ -150,7 +150,12 @@ function HeaderResponsive({ links = APP_LINKS }: HeaderResponsiveProps) {
     <Header height={HEADER_HEIGHT} mb={120} className={classes.root}>
       <Container className={classes.header}>
         <Group spacing='xs'>
-          <Image height={25} width='auto' src={theme.colorScheme === 'dark' ? dgWhite : dgBlack} alt='DG' />
+          <Image
+            height={25}
+            width='auto'
+            src={theme.colorScheme === 'dark' ? dgWhite : dgBlack}
+            alt='DG'
+          />
           <Text size='xl'>Danial Endrawes</Text>
         </Group>
 

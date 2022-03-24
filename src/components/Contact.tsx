@@ -101,27 +101,27 @@ function Contact() {
               Send me an email and I'll get back to you as soon as I can!
             </Text>
 
-            <ContactIconsList variant='white'/>
+            <ContactIconsList variant='white' />
 
             {/* <Group mt='xl'>{icons}</Group> */}
           </div>
           <div className={classes.form}>
             <TextInput
               label='Email'
-              placeholder='your@email.com'
+              // placeholder='your@email.com'
               required
               classNames={{ input: classes.input, label: classes.inputLabel }}
             />
             <TextInput
               label='Subject'
-              placeholder='Title'
+              // placeholder='Title'
               mt='md'
               classNames={{ input: classes.input, label: classes.inputLabel }}
             />
             <Textarea
               required
               label='Message'
-              placeholder="Let's talk!"
+              // placeholder="Let's talk!"
               minRows={4}
               mt='md'
               classNames={{ input: classes.input, label: classes.inputLabel }}

@@ -33,7 +33,7 @@ const useStyles = createStyles(theme => ({
 
   links: {
     [theme.fn.smallerThan('xs')]: {
-      marginTop: theme.spacing.md,
+      marginBottom: theme.spacing.md,
     },
   },
 }));
@@ -44,28 +44,6 @@ function Footer() {
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
-        <MediaQuery largerThan='xs' styles={{ display: 'none' }}>
-          <div style={{ textAlign: 'center' }}>
-            <Text>© Danial Endrawes 2022.</Text>
-            <Text>
-              Made with mantine.dev by{' '}
-              <Anchor href='https://github.com/RenDelaCruz' target='_blank'>
-                RDC
-              </Anchor>
-              .
-            </Text>
-          </div>
-        </MediaQuery>
-        <MediaQuery smallerThan='xs' styles={{ display: 'none' }}>
-          <Text>
-            © Danial Endrawes 2022. Made with mantine.dev by{' '}
-            <Anchor href='https://github.com/RenDelaCruz' target='_blank'>
-              RDC
-            </Anchor>
-            .
-          </Text>
-        </MediaQuery>
-
         <Group spacing={0} className={classes.links} position='right' noWrap>
           <ActionIcon<'a'> size='lg' component='a' href='mailto:danialendrawes@gmail.com'>
             <At size={18} />
@@ -90,6 +68,28 @@ function Footer() {
             <BrandYoutube size={18} />
           </ActionIcon>
         </Group>
+
+        <MediaQuery largerThan='xs' styles={{ display: 'none' }}>
+          <div style={{ textAlign: 'center' }}>
+            <Text>© Danial Endrawes 2022.</Text>
+            <Text>
+              Made with mantine.dev by{' '}
+              <Anchor href='https://github.com/RenDelaCruz' target='_blank'>
+                RDC
+              </Anchor>
+              .
+            </Text>
+          </div>
+        </MediaQuery>
+        <MediaQuery smallerThan='xs' styles={{ display: 'none' }}>
+          <Text>
+            © Danial Endrawes 2022. Made with mantine.dev by{' '}
+            <Anchor href='https://github.com/RenDelaCruz' target='_blank'>
+              RDC
+            </Anchor>
+            .
+          </Text>
+        </MediaQuery>
       </Container>
     </div>
   );
