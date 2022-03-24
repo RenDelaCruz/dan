@@ -12,8 +12,8 @@ import {
 } from '@mantine/core';
 import React from 'react';
 import { BrandInstagram, BrandTwitter, BrandYoutube } from 'tabler-icons-react';
+import ContactIconsList from './ContactIconList';
 import SectionTitle from './SectionTitle';
-// import { ContactIconsList } from '../ContactIcons/ContactIcons';
 
 const useStyles = createStyles(theme => ({
   wrapper: {
@@ -89,6 +89,7 @@ function Contact() {
       <Icon size={22} />
     </ActionIcon>
   ));
+
   return (
     <Container id='contact' size={900}>
       <SectionTitle>Contact</SectionTitle>
@@ -97,12 +98,12 @@ function Contact() {
           <div>
             <Title className={classes.title}>Get in touch</Title>
             <Text className={classes.description} mt='sm' mb={30}>
-              Leave your email and we will get back to you soon!
+              Send me an email and I'll get back to you as soon as I can!
             </Text>
 
-            {/* <ContactIconsList variant='white' /> */}
+            <ContactIconsList variant='white'/>
 
-            <Group mt='xl'>{icons}</Group>
+            {/* <Group mt='xl'>{icons}</Group> */}
           </div>
           <div className={classes.form}>
             <TextInput
@@ -112,15 +113,15 @@ function Contact() {
               classNames={{ input: classes.input, label: classes.inputLabel }}
             />
             <TextInput
-              label='Name'
-              placeholder='John Doe'
+              label='Subject'
+              placeholder='Title'
               mt='md'
               classNames={{ input: classes.input, label: classes.inputLabel }}
             />
             <Textarea
               required
-              label='Your message'
-              placeholder='I want to order your goods'
+              label='Message'
+              placeholder="Let's talk!"
               minRows={4}
               mt='md'
               classNames={{ input: classes.input, label: classes.inputLabel }}

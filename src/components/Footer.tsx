@@ -1,6 +1,14 @@
-import { ActionIcon, Container, createStyles, Group, MediaQuery, Text } from '@mantine/core';
+import {
+  ActionIcon,
+  Anchor,
+  Container,
+  createStyles,
+  Group,
+  MediaQuery,
+  Text,
+} from '@mantine/core';
 import React from 'react';
-import { BrandInstagram, BrandTwitter, BrandYoutube } from 'tabler-icons-react';
+import { At, BrandLinkedin, BrandYoutube, Phone } from 'tabler-icons-react';
 
 const useStyles = createStyles(theme => ({
   footer: {
@@ -37,24 +45,49 @@ function Footer() {
     <div className={classes.footer}>
       <Container className={classes.inner}>
         <MediaQuery largerThan='xs' styles={{ display: 'none' }}>
-          <div style={{textAlign: 'center'}}>
+          <div style={{ textAlign: 'center' }}>
             <Text>© Danial Endrawes 2022.</Text>
-            <Text>Made with mantine.dev by RDC.</Text>
+            <Text>
+              Made with mantine.dev by{' '}
+              <Anchor href='https://github.com/RenDelaCruz' target='_blank'>
+                RDC
+              </Anchor>
+              .
+            </Text>
           </div>
         </MediaQuery>
         <MediaQuery smallerThan='xs' styles={{ display: 'none' }}>
-          <Text>© Danial Endrawes 2022. Made with mantine.dev by RDC.</Text>
+          <Text>
+            © Danial Endrawes 2022. Made with mantine.dev by{' '}
+            <Anchor href='https://github.com/RenDelaCruz' target='_blank'>
+              RDC
+            </Anchor>
+            .
+          </Text>
         </MediaQuery>
 
         <Group spacing={0} className={classes.links} position='right' noWrap>
-          <ActionIcon size='lg'>
-            <BrandTwitter size={18} />
+          <ActionIcon<'a'> size='lg' component='a' href='mailto:danialendrawes@gmail.com'>
+            <At size={18} />
           </ActionIcon>
-          <ActionIcon size='lg'>
+          <ActionIcon<'a'> size='lg' component='a' href='tel:6472447252'>
+            <Phone size={18} />
+          </ActionIcon>
+          <ActionIcon<'a'>
+            size='lg'
+            component='a'
+            href='https://www.linkedin.com/in/DanialEnd'
+            target='_blank'
+          >
+            <BrandLinkedin size={18} />
+          </ActionIcon>
+          <ActionIcon<'a'>
+            size='lg'
+            component='a'
+            href='https://www.youtube.com/c/CaptainDanGroove'
+            target='_blank'
+          >
             <BrandYoutube size={18} />
-          </ActionIcon>
-          <ActionIcon size='lg'>
-            <BrandInstagram size={18} />
           </ActionIcon>
         </Group>
       </Container>

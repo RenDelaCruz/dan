@@ -19,7 +19,7 @@ import SwitchToggle from './SwitchToggle';
 
 const HEADER_HEIGHT = 60;
 
-const appLinks = [
+const APP_LINKS = [
   {
     link: 'home',
     label: 'Home',
@@ -120,7 +120,7 @@ interface HeaderResponsiveProps {
   links?: { link: string; label: string }[];
 }
 
-function HeaderResponsive({ links = appLinks }: HeaderResponsiveProps) {
+function HeaderResponsive({ links = APP_LINKS }: HeaderResponsiveProps) {
   const [opened, toggleOpened] = useBooleanToggle(false);
   const [active, setActive] = useState(links[0].link);
   const { classes, cx } = useStyles();
@@ -150,7 +150,7 @@ function HeaderResponsive({ links = appLinks }: HeaderResponsiveProps) {
     <Header height={HEADER_HEIGHT} mb={120} className={classes.root}>
       <Container className={classes.header}>
         <Group spacing='xs'>
-          <Image width={25} src={theme.colorScheme === 'dark' ? dgWhite : dgBlack} alt='DG' />
+          <Image height={25} width='auto' src={theme.colorScheme === 'dark' ? dgWhite : dgBlack} alt='DG' />
           <Text size='xl'>Danial Endrawes</Text>
         </Group>
 
