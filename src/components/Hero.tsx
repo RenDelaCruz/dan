@@ -9,6 +9,7 @@ import {
   useMantineTheme,
 } from '@mantine/core';
 import React from 'react';
+import { scrollIntoView } from 'seamless-scroll-polyfill';
 import { Check } from 'tabler-icons-react';
 import resume from '../assets/DanialEndrawes_Resume.pdf';
 
@@ -149,20 +150,17 @@ function HeroAbout() {
           </Button>
 
           <Button
-            component='a'
-            href='#contact'
-            size='md'
             variant='light'
             className={cx(classes.control, classes.githubControl)}
             // color={theme.colorScheme === 'dark' ? 'gray' : 'dark'}
-            // onClick={event => {
-            //   event.preventDefault();
+            onClick={(event: any) => {
+              event.preventDefault();
 
-            //   const section = document.getElementById('contact');
-            //   if (section) {
-            //     scrollIntoView(section, { behavior: 'smooth' });
-            //   }
-            // }}
+              const section = document.getElementById('contact');
+              if (section) {
+                scrollIntoView(section, { behavior: 'smooth' });
+              }
+            }}
           >
             Contact
           </Button>

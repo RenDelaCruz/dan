@@ -8,6 +8,7 @@ import {
   Paper,
   Text,
   Transition,
+  UnstyledButton,
   useMantineTheme,
 } from '@mantine/core';
 import { useBooleanToggle } from '@mantine/hooks';
@@ -41,6 +42,10 @@ const APP_LINKS = [
 const useStyles = createStyles(theme => ({
   root: {
     zIndex: 1,
+    borderBottom: `1px solid ${
+      theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2]
+    }`,
+    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
   },
 
   dropdown: {
@@ -149,15 +154,26 @@ function HeaderResponsive({ links = APP_LINKS }: HeaderResponsiveProps) {
   return (
     <Header height={HEADER_HEIGHT} mb={120} className={classes.root}>
       <Container className={classes.header}>
-        <Group spacing='xs'>
-          <Image
-            height={25}
-            width='auto'
-            src={theme.colorScheme === 'dark' ? dgWhite : dgBlack}
-            alt='DG'
-          />
-          <Text size='xl'>Danial Endrawes</Text>
-        </Group>
+        <UnstyledButton
+          onClick={(event: any) => {
+            event.preventDefault();
+
+            const section = document.getElementById('home');
+            if (section) {
+              scrollIntoView(section, { behavior: 'smooth' });
+            }
+          }}
+        >
+          <Group spacing='xs'>
+            <Image
+              height={25}
+              width='auto'
+              src={theme.colorScheme === 'dark' ? dgWhite : dgBlack}
+              alt='DG'
+            />
+            <Text size='xl'>Danial Endrawes</Text>
+          </Group>
+        </UnstyledButton>
 
         <Group spacing={17}>
           <Group spacing={5} className={classes.links}>
@@ -176,7 +192,7 @@ function HeaderResponsive({ links = APP_LINKS }: HeaderResponsiveProps) {
 
         <Transition transition='pop-top-right' duration={200} mounted={opened}>
           {styles => (
-            <Paper className={classes.dropdown} withBorder style={styles} shadow='sm'>
+            <Paper className={classes.dropdown} withBorder style={styles} shadow='md'>
               {items}
             </Paper>
           )}

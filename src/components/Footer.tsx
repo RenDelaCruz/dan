@@ -6,6 +6,7 @@ import {
   Group,
   MediaQuery,
   Text,
+  Tooltip,
 } from '@mantine/core';
 import React from 'react';
 import { At, BrandLinkedin, BrandYoutube, Phone } from 'tabler-icons-react';
@@ -45,28 +46,36 @@ function Footer() {
     <div className={classes.footer}>
       <Container className={classes.inner}>
         <Group spacing={0} className={classes.links} position='right' noWrap>
-          <ActionIcon<'a'> size='lg' component='a' href='mailto:danialendrawes@gmail.com'>
-            <At size={18} />
-          </ActionIcon>
-          <ActionIcon<'a'> size='lg' component='a' href='tel:6472447252'>
-            <Phone size={18} />
-          </ActionIcon>
-          <ActionIcon<'a'>
-            size='lg'
-            component='a'
-            href='https://www.linkedin.com/in/DanialEnd'
-            target='_blank'
-          >
-            <BrandLinkedin size={18} />
-          </ActionIcon>
-          <ActionIcon<'a'>
-            size='lg'
-            component='a'
-            href='https://www.youtube.com/c/CaptainDanGroove'
-            target='_blank'
-          >
-            <BrandYoutube size={18} />
-          </ActionIcon>
+          <Tooltip label='Email' withArrow>
+            <ActionIcon<'a'> size='lg' component='a' href='mailto:danialendrawes@gmail.com'>
+              <At size={18} />
+            </ActionIcon>
+          </Tooltip>
+          <Tooltip label='Phone' withArrow>
+            <ActionIcon<'a'> size='lg' component='a' href='tel:6472447252'>
+              <Phone size={18} />
+            </ActionIcon>
+          </Tooltip>
+          <Tooltip label='LinkedIn' withArrow>
+            <ActionIcon<'a'>
+              size='lg'
+              component='a'
+              href='https://www.linkedin.com/in/DanialEnd'
+              target='_blank'
+            >
+              <BrandLinkedin size={18} />
+            </ActionIcon>
+          </Tooltip>
+          <Tooltip label='YouTube' withArrow>
+            <ActionIcon<'a'>
+              size='lg'
+              component='a'
+              href='https://www.youtube.com/c/CaptainDanGroove'
+              target='_blank'
+            >
+              <BrandYoutube size={18} />
+            </ActionIcon>
+          </Tooltip>
         </Group>
 
         <MediaQuery largerThan='xs' styles={{ display: 'none' }}>

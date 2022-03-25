@@ -15,7 +15,7 @@ function Experience() {
           title={<Text size='xl'>Graphic Designer / Video Editor / Web Designer</Text>}
         >
           <Text color='dimmed' size='lg'>
-            <Text variant='link' component='span' inherit>
+            <Text color='red' component='span' inherit>
               HMC Connections
             </Text>{' '}
             - Summer Student
@@ -30,7 +30,7 @@ function Experience() {
           title={<Text size='xl'>Graphic Designer / Web Designer</Text>}
         >
           <Text color='dimmed' size='lg'>
-            <Text variant='link' component='span' inherit>
+            <Text color='red' component='span' inherit>
               HMC Connections
             </Text>{' '}
             - Summer Student
@@ -46,7 +46,7 @@ function Experience() {
           lineVariant='dashed'
         >
           <Text color='dimmed' size='lg'>
-            <Text variant='link' component='span' inherit>
+            <Text color='red' component='span' inherit>
               HMC Connections
             </Text>{' '}
             - Summer Student
@@ -61,7 +61,7 @@ function Experience() {
           bullet={<Palette size={12} />}
         >
           <Text color='dimmed' size='lg'>
-            <Text variant='link' component='span' inherit>
+            <Text color='red' component='span' inherit>
               HMC Connections
             </Text>{' '}
             - 7 month contract
