@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dan/static/css/main.2d2699d5.css",
-    "main.js": "/dan/static/js/main.1280b6d1.js",
+    "main.css": "/dan/static/css/main.bf953e15.css",
+    "main.js": "/dan/static/js/main.264c98f9.js",
     "static/js/787.0537d1f0.chunk.js": "/dan/static/js/787.0537d1f0.chunk.js",
     "static/media/DanialEndrawes_Resume.pdf": "/dan/static/media/DanialEndrawes_Resume.15e75b433f9707d92cb7.pdf",
     "static/media/clip.png": "/dan/static/media/clip.afdba7933d85b34c746f.png",
@@ -10,12 +10,12 @@
     "static/media/dg-white.svg": "/dan/static/media/dg-white.d149b9cbfa4a4d7b7cb6ed4212dd456c.svg",
     "static/media/dg-black.svg": "/dan/static/media/dg-black.c1ceac2eaff8024d520795315e8f7789.svg",
     "index.html": "/dan/index.html",
-    "main.2d2699d5.css.map": "/dan/static/css/main.2d2699d5.css.map",
-    "main.1280b6d1.js.map": "/dan/static/js/main.1280b6d1.js.map",
+    "main.bf953e15.css.map": "/dan/static/css/main.bf953e15.css.map",
+    "main.264c98f9.js.map": "/dan/static/js/main.264c98f9.js.map",
     "787.0537d1f0.chunk.js.map": "/dan/static/js/787.0537d1f0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2d2699d5.css",
-    "static/js/main.1280b6d1.js"
+    "static/css/main.bf953e15.css",
+    "static/js/main.264c98f9.js"
   ]
 }
