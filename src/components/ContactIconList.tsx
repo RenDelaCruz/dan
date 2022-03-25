@@ -1,4 +1,4 @@
-import { Box, createStyles, Group, Text, ThemeIcon } from '@mantine/core';
+import { Box, createStyles, Group, Text, ThemeIcon, UnstyledButton } from '@mantine/core';
 import React from 'react';
 import { At, BrandLinkedin, BrandYoutube, Phone } from 'tabler-icons-react';
 
@@ -54,31 +54,35 @@ function ContactIcon({
 }: ContactIconProps) {
   const { classes, cx } = useStyles({ variant });
   return (
-    <div className={cx(classes.wrapper, className)} {...others}>
-      {variant === 'gradient' ? (
-        <ThemeIcon size={40} radius='md' className={classes.icon}>
-          <Icon size={24} />
-        </ThemeIcon>
-      ) : (
-        <Box mr='md'>
-          <Icon size={24} />
-        </Box>
-      )}
+    <UnstyledButton
+      className='slide-hover'
+      onClick={() => {
+        if (link.includes('://')) {
+          window.open(link, '_blank')?.focus();
+        } else {
+          window.location.href = link;
+        }
+      }}
+    >
+      <div className={cx(classes.wrapper, className)} {...others}>
+        {variant === 'gradient' ? (
+          <ThemeIcon size={40} radius='md' className={classes.icon}>
+            <Icon size={24} />
+          </ThemeIcon>
+        ) : (
+          <Box mr='md'>
+            <Icon size={24} />
+          </Box>
+        )}
 
-      <div>
-        <Text size='xs' className={classes.title}>
-          {title}
-        </Text>
-        <Text<'a'>
-          className={classes.description}
-          component='a'
-          href={link}
-          target={link.includes('://') ? '_blank' : undefined}
-        >
-          {description}
-        </Text>
+        <div>
+          <Text size='xs' className={classes.title}>
+            {title}
+          </Text>
+          <Text className={classes.description}>{description}</Text>
+        </div>
       </div>
-    </div>
+    </UnstyledButton>
   );
 }
 
@@ -94,7 +98,7 @@ const CONTACT_DATA = [
     link: 'mailto:danialendrawes@gmail.com',
     icon: At,
   },
-  { title: 'Phone', description: '+1 (647) 244 - 7252', link: 'tel:6472447252', icon: Phone },
+  { title: 'Phone', description: '+1 (647) 244-7252', link: 'tel:6472447252', icon: Phone },
   {
     title: 'LinkedIn',
     description: 'linkedin.com/in/DanialEnd',
