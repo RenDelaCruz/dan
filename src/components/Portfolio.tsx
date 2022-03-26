@@ -27,7 +27,7 @@ const useStyles = createStyles(theme => ({
 const child = <Skeleton sx={{ zIndex: 0 }} height={350} radius='md' animate={false} />;
 
 function Portfolio() {
-  const matches = useMediaQuery('(min-width: 576px)');
+  const matches = useMediaQuery('(min-width: 770px)');
   const { classes } = useStyles();
 
   return (
@@ -35,10 +35,11 @@ function Portfolio() {
       <SectionTitle noPadding>Portfolio</SectionTitle>
       <Container my='md'>
         <Grid grow className={classes.sameHeight}>
-          <Grid.Col xs={8}>
+          <Grid.Col sm={8}>
             {
               <Paper shadow='xl' radius='md'>
                 <Image
+                  className='zoom'
                   src={oneBurlingtonPng}
                   radius='md'
                   height={matches ? '66vh' : 'auto'}
@@ -47,10 +48,11 @@ function Portfolio() {
               </Paper>
             }
           </Grid.Col>
-          <Grid.Col xs={4}>
+          <Grid.Col sm={4}>
             {
               <Paper shadow='xl' radius='md'>
                 <Image
+                className='zoom'
                   src={imaginablePng}
                   radius='md'
                   height={matches ? '66vh' : 'auto'}
@@ -59,10 +61,11 @@ function Portfolio() {
               </Paper>
             }
           </Grid.Col>
-          <Grid.Col xs={4}>
+          <Grid.Col sm={4}>
             {
               <Paper shadow='xl' radius='md'>
                 <Image
+                className='zoom'
                   src={portraitPng}
                   radius='md'
                   height={matches ? '66vh' : 'auto'}
@@ -71,10 +74,11 @@ function Portfolio() {
               </Paper>
             }
           </Grid.Col>
-          <Grid.Col xs={8}>
+          <Grid.Col sm={8}>
             {
               <Paper shadow='xl' radius='md'>
                 <Image
+                className='zoom'
                   src={galaxyBitesPng}
                   radius='md'
                   height={matches ? '66vh' : 'auto'}
@@ -83,10 +87,11 @@ function Portfolio() {
               </Paper>
             }
           </Grid.Col>
-          <Grid.Col xs={12}>
+          <Grid.Col sm={12}>
             {
               <Paper shadow='xl' radius='md'>
                 <Image
+                className='zoom'
                   src={magdalenaMockupsPng}
                   radius='md'
                   height={matches ? '66vh' : 'auto'}
@@ -95,10 +100,11 @@ function Portfolio() {
               </Paper>
             }
           </Grid.Col>
-          <Grid.Col xs={8}>
+          <Grid.Col sm={8}>
             {
               <Paper shadow='xl' radius='md'>
                 <Image
+                className='zoom'
                   src={safetyDrivesUsPng}
                   radius='md'
                   height={matches ? '66vh' : 'auto'}
@@ -107,10 +113,11 @@ function Portfolio() {
               </Paper>
             }
           </Grid.Col>
-          <Grid.Col xs={4}>
+          <Grid.Col sm={4}>
             {
               <Paper shadow='xl' radius='md'>
                 <Image
+                className='zoom'
                   src={spillTheBeansPng}
                   radius='md'
                   height={matches ? '66vh' : 'auto'}
@@ -119,10 +126,11 @@ function Portfolio() {
               </Paper>
             }
           </Grid.Col>
-          <Grid.Col xs={12}>
+          <Grid.Col sm={12}>
             {
               <Paper shadow='xl' radius='md'>
                 <Image
+                className='zoom'
                   src={channelPng}
                   radius='md'
                   height={matches ? '66vh' : 'auto'}

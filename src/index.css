@@ -48,3 +48,11 @@ code {
 .slide-hover:hover {
   transform: translateY(-15%);
 }
+
+.zoom {
+  transition: transform 0.2s;
+}
+
+.zoom:hover {
+  transform: scale(1.04);
+}
