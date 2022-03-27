@@ -171,7 +171,12 @@ function HeaderResponsive({ links = APP_LINKS }: HeaderResponsiveProps) {
               src={theme.colorScheme === 'dark' ? dgWhite : dgBlack}
               alt='DG'
             />
-            <Text size='xl'>Danial Endrawes</Text>
+            <Text
+              size='xl'
+              color={theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.dark[8]}
+            >
+              Danial Endrawes
+            </Text>
           </Group>
         </UnstyledButton>
 
