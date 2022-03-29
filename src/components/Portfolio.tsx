@@ -1,4 +1,4 @@
-import { Container, createStyles, Grid, Image, Paper, Skeleton } from '@mantine/core';
+import { Container, createStyles, Group, Image, Paper, ScrollArea, Skeleton } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import React from 'react';
 import channelPng from '../assets/portfolio/channel.png';
@@ -31,118 +31,207 @@ function Portfolio() {
   const { classes } = useStyles();
 
   return (
-    <Container id='portfolio' size={900}>
-      <SectionTitle noPadding>Portfolio</SectionTitle>
-      <Container my='md'>
-        <Grid grow className={classes.sameHeight}>
-          <Grid.Col sm={8}>
-            {
-              <Paper shadow='xl' radius='md'>
-                <Image
-                  className='zoom'
-                  src={oneBurlingtonPng}
-                  radius='md'
-                  height={matches ? '66vh' : 'auto'}
-                  alt='One Burlington'
-                />
-              </Paper>
-            }
-          </Grid.Col>
-          <Grid.Col sm={4}>
-            {
-              <Paper shadow='xl' radius='md'>
-                <Image
-                className='zoom'
-                  src={imaginablePng}
-                  radius='md'
-                  height={matches ? '66vh' : 'auto'}
-                  alt='ImaginAble'
-                />
-              </Paper>
-            }
-          </Grid.Col>
-          <Grid.Col sm={4}>
-            {
-              <Paper shadow='xl' radius='md'>
-                <Image
-                className='zoom'
-                  src={portraitPng}
-                  radius='md'
-                  height={matches ? '66vh' : 'auto'}
-                  alt='Portrait'
-                />
-              </Paper>
-            }
-          </Grid.Col>
-          <Grid.Col sm={8}>
-            {
-              <Paper shadow='xl' radius='md'>
-                <Image
-                className='zoom'
-                  src={galaxyBitesPng}
-                  radius='md'
-                  height={matches ? '66vh' : 'auto'}
-                  alt='Galaxy Bites'
-                />
-              </Paper>
-            }
-          </Grid.Col>
-          <Grid.Col sm={12}>
-            {
-              <Paper shadow='xl' radius='md'>
-                <Image
-                className='zoom'
-                  src={magdalenaMockupsPng}
-                  radius='md'
-                  height={matches ? '66vh' : 'auto'}
-                  alt='Magdalena'
-                />
-              </Paper>
-            }
-          </Grid.Col>
-          <Grid.Col sm={8}>
-            {
-              <Paper shadow='xl' radius='md'>
-                <Image
-                className='zoom'
-                  src={safetyDrivesUsPng}
-                  radius='md'
-                  height={matches ? '66vh' : 'auto'}
-                  alt='Safety Drives Us'
-                />
-              </Paper>
-            }
-          </Grid.Col>
-          <Grid.Col sm={4}>
-            {
-              <Paper shadow='xl' radius='md'>
-                <Image
-                className='zoom'
-                  src={spillTheBeansPng}
-                  radius='md'
-                  height={matches ? '66vh' : 'auto'}
-                  alt='Spill the Beans'
-                />
-              </Paper>
-            }
-          </Grid.Col>
-          <Grid.Col sm={12}>
-            {
-              <Paper shadow='xl' radius='md'>
-                <Image
-                className='zoom'
-                  src={channelPng}
-                  radius='md'
-                  height={matches ? '66vh' : 'auto'}
-                  alt='YouTube Channel'
-                />
-              </Paper>
-            }
-          </Grid.Col>
-        </Grid>
+    <>
+      <Container id='portfolio' size={900} style={{ paddingBottom: 20 }}>
+        <SectionTitle noPadding>Portfolio</SectionTitle>
       </Container>
-    </Container>
+      <ScrollArea style={{ height: '70vh', width: 'calc(100% + 32px)', marginLeft: '-16px' }}>
+        <Group noWrap spacing='lg' pt={10}>
+          <Paper shadow='sm' radius='md'>
+            <Image
+              className='zoom'
+              src={oneBurlingtonPng}
+              radius='md'
+              height='66vh'
+              width='auto'
+              alt='One Burlington'
+            />
+          </Paper>
+          <Paper shadow='sm' radius='md'>
+            <Image
+              className='zoom'
+              src={imaginablePng}
+              radius='md'
+              height='66vh'
+              width='auto'
+              alt='ImaginAble'
+            />
+          </Paper>
+          <Paper shadow='sm' radius='md'>
+            <Image
+              className='zoom'
+              src={portraitPng}
+              radius='md'
+              height='66vh'
+              width='auto'
+              alt='Portrait'
+            />
+          </Paper>
+          <Paper shadow='sm' radius='md'>
+            <Image
+              className='zoom'
+              src={galaxyBitesPng}
+              radius='md'
+              height='66vh'
+              width='auto'
+              alt='Galaxy Bites'
+            />
+          </Paper>
+          <Paper shadow='sm' radius='md'>
+            <Image
+              className='zoom'
+              src={magdalenaMockupsPng}
+              radius='md'
+              height='66vh'
+              width='auto'
+              alt='Magdalena'
+            />
+          </Paper>
+          <Paper shadow='sm' radius='md'>
+            <Image
+              className='zoom'
+              src={safetyDrivesUsPng}
+              radius='md'
+              height='66vh'
+              width='auto'
+              alt='Safety Drives Us'
+            />
+          </Paper>
+          <Paper shadow='sm' radius='md'>
+            <Image
+              className='zoom'
+              src={spillTheBeansPng}
+              radius='md'
+              height='66vh'
+              width='auto'
+              alt='Spill the Beans'
+            />
+          </Paper>
+          <Paper shadow='sm' radius='md'>
+            <Image
+              className='zoom'
+              src={channelPng}
+              radius='md'
+              height='66vh'
+              width='auto'
+              alt='YouTube Channel'
+            />
+          </Paper>
+        </Group>
+      </ScrollArea>
+    </>
   );
 }
 
 export default Portfolio;
+
+{
+  /* <Container my='md'>
+          <Grid grow className={classes.sameHeight}>
+            <Grid.Col sm={8}>
+              {
+                <Paper shadow='xl' radius='md'>
+                  <Image
+                    className='zoom'
+                    src={oneBurlingtonPng}
+                    radius='md'
+                    height={matches ? '66vh' : 'auto'}
+                    alt='One Burlington'
+                  />
+                </Paper>
+              }
+            </Grid.Col>
+            <Grid.Col sm={4}>
+              {
+                <Paper shadow='xl' radius='md'>
+                  <Image
+                    className='zoom'
+                    src={imaginablePng}
+                    radius='md'
+                    height={matches ? '66vh' : 'auto'}
+                    alt='ImaginAble'
+                  />
+                </Paper>
+              }
+            </Grid.Col>
+            <Grid.Col sm={4}>
+              {
+                <Paper shadow='xl' radius='md'>
+                  <Image
+                    className='zoom'
+                    src={portraitPng}
+                    radius='md'
+                    height={matches ? '66vh' : 'auto'}
+                    alt='Portrait'
+                  />
+                </Paper>
+              }
+            </Grid.Col>
+            <Grid.Col sm={8}>
+              {
+                <Paper shadow='xl' radius='md'>
+                  <Image
+                    className='zoom'
+                    src={galaxyBitesPng}
+                    radius='md'
+                    height={matches ? '66vh' : 'auto'}
+                    alt='Galaxy Bites'
+                  />
+                </Paper>
+              }
+            </Grid.Col>
+            <Grid.Col sm={12}>
+              {
+                <Paper shadow='xl' radius='md'>
+                  <Image
+                    className='zoom'
+                    src={magdalenaMockupsPng}
+                    radius='md'
+                    height={matches ? '66vh' : 'auto'}
+                    alt='Magdalena'
+                  />
+                </Paper>
+              }
+            </Grid.Col>
+            <Grid.Col sm={8}>
+              {
+                <Paper shadow='xl' radius='md'>
+                  <Image
+                    className='zoom'
+                    src={safetyDrivesUsPng}
+                    radius='md'
+                    height={matches ? '66vh' : 'auto'}
+                    alt='Safety Drives Us'
+                  />
+                </Paper>
+              }
+            </Grid.Col>
+            <Grid.Col sm={4}>
+              {
+                <Paper shadow='xl' radius='md'>
+                  <Image
+                    className='zoom'
+                    src={spillTheBeansPng}
+                    radius='md'
+                    height={matches ? '66vh' : 'auto'}
+                    alt='Spill the Beans'
+                  />
+                </Paper>
+              }
+            </Grid.Col>
+            <Grid.Col sm={12}>
+              {
+                <Paper shadow='xl' radius='md'>
+                  <Image
+                    className='zoom'
+                    src={channelPng}
+                    radius='md'
+                    height={matches ? '66vh' : 'auto'}
+                    alt='YouTube Channel'
+                  />
+                </Paper>
+              }
+            </Grid.Col>
+          </Grid> 
+        </Container>*/
+}
