@@ -4,6 +4,7 @@ import {
   Grid,
   Group,
   Image,
+  Loader,
   Modal,
   Paper,
   ScrollArea,
@@ -58,6 +59,8 @@ const useStyles = createStyles(theme => ({
 
 const child = <Skeleton sx={{ zIndex: 0 }} height={350} radius='md' animate={false} />;
 
+const placeholder = <Loader />; //<Skeleton radius='md' />;
+
 function Portfolio() {
   const matches = useMediaQuery('(min-width: 770px)');
   const { classes } = useStyles();
@@ -82,7 +85,10 @@ function Portfolio() {
           onClose={() => setOpened(false)}
           centered
         >
-          <div style={{ paddingTop: 0, paddingBottom: 50, paddingLeft: 50, paddingRight: 50 }}>
+          <div
+            style={{ paddingTop: 0, paddingBottom: 50, paddingLeft: '2vw', paddingRight: '2vw' }}
+          >
+            <input type='hidden' data-autofocus />
             <SectionTitle noPadding>One Burlington Logo Redesign</SectionTitle>
             <Grid>
               <Grid.Col sm={9}>
@@ -91,18 +97,20 @@ function Portfolio() {
                     src={oneBurlingtonGif}
                     radius='md'
                     alt='One Burlington Redesign'
-                    caption='Logo Animation'
+                    withPlaceholder
+                    placeholder={placeholder}
                   />
                 </Paper>
               </Grid.Col>
               <Grid.Col sm={3}>
-                <Group direction='column'>
+                <Group direction={matches ? 'column' : 'row'} noWrap>
                   <Paper shadow='sm' radius='md'>
                     <Image
                       src={oldOneBurlingtonPng}
                       radius='md'
                       alt='Old One Burlington Logo'
-                      caption='Old Logo'
+                      withPlaceholder
+                      placeholder={placeholder}
                     />
                   </Paper>
                   <Paper shadow='sm' radius='md'>
@@ -110,7 +118,8 @@ function Portfolio() {
                       src={oneBurlingtonPng}
                       radius='md'
                       alt='New Burlington Redesign'
-                      caption='New Logo'
+                      withPlaceholder
+                      placeholder={placeholder}
                     />
                   </Paper>
                 </Group>
@@ -129,6 +138,8 @@ function Portfolio() {
               height='66vh'
               width='auto'
               alt='One Burlington'
+              withPlaceholder
+              placeholder={placeholder}
             />
           </Paper>
           <Group direction='column'>
@@ -140,6 +151,8 @@ function Portfolio() {
                 height={subHeight}
                 width={subWidth}
                 alt='Galaxy Bites'
+                withPlaceholder
+                placeholder={placeholder}
               />
             </Paper>
             <Paper shadow='sm' radius='md'>
@@ -150,6 +163,8 @@ function Portfolio() {
                 height={subHeight}
                 width={subWidth}
                 alt='Safety Drives Us'
+                withPlaceholder
+                placeholder={placeholder}
               />
             </Paper>
           </Group>
@@ -161,6 +176,8 @@ function Portfolio() {
               height='66vh'
               width='auto'
               alt='ImaginAble'
+              withPlaceholder
+              placeholder={placeholder}
             />
           </Paper>
           <Paper shadow='sm' radius='md'>
@@ -171,6 +188,8 @@ function Portfolio() {
               height='66vh'
               width='auto'
               alt='Portrait'
+              withPlaceholder
+              placeholder={placeholder}
             />
           </Paper>
           <Group direction='column'>
@@ -182,6 +201,8 @@ function Portfolio() {
                 height={subHeight}
                 width={subWidth}
                 alt='Magdalena'
+                withPlaceholder
+                placeholder={placeholder}
               />
             </Paper>
 
@@ -193,6 +214,8 @@ function Portfolio() {
                 height={subHeight}
                 width={subWidth}
                 alt='YouTube Channel'
+                withPlaceholder
+                placeholder={placeholder}
               />
             </Paper>
           </Group>
@@ -204,6 +227,8 @@ function Portfolio() {
               height='66vh'
               width='auto'
               alt='Spill the Beans'
+              withPlaceholder
+              placeholder={placeholder}
             />
           </Paper>
         </Group>
