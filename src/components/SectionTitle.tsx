@@ -17,10 +17,6 @@ const useStyles = createStyles(theme => ({
   noPadding: {
     paddingTop: 0,
     paddingBottom: 30,
-
-    [theme.fn.smallerThan('sm')]: {
-      paddingTop: 40,
-    },
   },
 
   line: {
@@ -39,8 +35,7 @@ function SectionTitle({ noPadding, children }: SectionProps) {
   const { classes } = useStyles();
 
   return (
-    // <div className={noPadding ? classes.noPadding : classes.title}></div>
-    <div className={classes.title}>
+    <div className={noPadding ? classes.noPadding : classes.title}>
       <Divider className={classes.line} />
       <h1 style={{ marginTop: 1, marginBottom: 1 }}>{children}</h1>
       <Divider className={classes.line} />
