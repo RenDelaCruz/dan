@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/dan/static/css/main.317c3da2.css",
-    "main.js": "/dan/static/js/main.2d18a796.js",
+    "main.js": "/dan/static/js/main.43d3e7a0.js",
     "static/js/787.0537d1f0.chunk.js": "/dan/static/js/787.0537d1f0.chunk.js",
     "static/media/magdalena-mockups.png": "/dan/static/media/magdalena-mockups.cbb14e18d9dcbab6f7ec.png",
     "static/media/one-burlington.gif": "/dan/static/media/one-burlington.4c7c0359e02048273d4c.gif",
-    "static/media/imaginable.png": "/dan/static/media/imaginable.65743a450f0915e44b11.png",
-    "static/media/spill-the-beans.png": "/dan/static/media/spill-the-beans.a9fe8b275f3ba9b720bd.png",
-    "static/media/portrait.png": "/dan/static/media/portrait.89d8832cd976196d3763.png",
-    "static/media/galaxy-bites.png": "/dan/static/media/galaxy-bites.c38d54015f7461ee2157.png",
-    "static/media/channel.png": "/dan/static/media/channel.fd37044f27975bf003d6.png",
-    "static/media/safety-drives-us.png": "/dan/static/media/safety-drives-us.47f40c9f6bc6b0624d8c.png",
+    "static/media/imaginable.png": "/dan/static/media/imaginable.0e19286160e514189d1a.png",
+    "static/media/spill-the-beans.png": "/dan/static/media/spill-the-beans.44bdf22c68de5674dc52.png",
+    "static/media/portrait.png": "/dan/static/media/portrait.bca0bc3a5dbbe7e445b0.png",
+    "static/media/galaxy-bites.png": "/dan/static/media/galaxy-bites.fe48e5ca05bff862c700.png",
+    "static/media/channel.png": "/dan/static/media/channel.53a1773ed6fb8c6d704a.png",
+    "static/media/safety-drives-us.png": "/dan/static/media/safety-drives-us.b92ecc6acdac5460d7cb.png",
     "static/media/DanialEndrawes_Resume.pdf": "/dan/static/media/DanialEndrawes_Resume.15e75b433f9707d92cb7.pdf",
     "static/media/clip.png": "/dan/static/media/clip.afdba7933d85b34c746f.png",
     "static/media/old-one-burlington.png": "/dan/static/media/old-one-burlington.087b6d04134c53bae77f.png",
@@ -20,11 +20,11 @@
     "static/media/dg-black.svg": "/dan/static/media/dg-black.c1ceac2eaff8024d520795315e8f7789.svg",
     "index.html": "/dan/index.html",
     "main.317c3da2.css.map": "/dan/static/css/main.317c3da2.css.map",
-    "main.2d18a796.js.map": "/dan/static/js/main.2d18a796.js.map",
+    "main.43d3e7a0.js.map": "/dan/static/js/main.43d3e7a0.js.map",
     "787.0537d1f0.chunk.js.map": "/dan/static/js/787.0537d1f0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.317c3da2.css",
-    "static/js/main.2d18a796.js"
+    "static/js/main.43d3e7a0.js"
   ]
 }
