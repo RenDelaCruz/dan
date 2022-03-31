@@ -11,7 +11,7 @@ import {
   Skeleton,
 } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import oldOneBurlingtonPng from '../assets/modal/old-one-burlington.png';
 import oneBurlingtonGif from '../assets/modal/one-burlington.gif';
 import channelPng from '../assets/portfolio/channel.png';
@@ -37,40 +37,39 @@ const useStyles = createStyles(theme => ({
   },
 }));
 
-// function useWindowSize() {
-//   const theme = useMantineTheme();
-//   const [size, setSize] = useState([0, 0]);
-
-//   useLayoutEffect(() => {
-//     function updateSize() {
-//       const BASE_HEIGHT = document.documentElement.clientHeight * 0.66;
-//       const getSubHeight = (children: number, spacing: number) =>
-//         BASE_HEIGHT / children - spacing * ((children - 1) / children);
-
-//       const subHeight = getSubHeight(2, theme.spacing.md);
-//       setSize([subHeight * (16 / 9), subHeight]);
-//     }
-//     window.addEventListener('resize', updateSize);
-//     updateSize();
-//     return () => window.removeEventListener('resize', updateSize);
-//   }, []);
-//   return size;
-// }
-
 const child = <Skeleton sx={{ zIndex: 0 }} height={350} radius='md' animate={false} />;
 
-const placeholder = <Loader />; //<Skeleton radius='md' />;
+const placeholder = <Loader variant='bars' />; //<Skeleton radius='md' />;
 
 function Portfolio() {
   const matches = useMediaQuery('(min-width: 770px)');
   const { classes } = useStyles();
 
   const [opened, setOpened] = useState(false);
-  // const [subWidth, subHeight] = useWindowSize();
 
-  // const baseHeight = '66vh';
   const subHeight = '31.433vh';
   const subWidth = `${31.433 * (16 / 9)}vh`;
+
+  const oneBurlingtonColumnRef = useRef<any>(null);
+  const [oneBurlingtonColumnHeight, setOneBurlingtonColumnHeight] = useState(
+    matches ? '29.5vw' : 'auto'
+  );
+
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      if (oneBurlingtonColumnRef.current) {
+        const height = oneBurlingtonColumnRef.current.clientHeight;
+        setOneBurlingtonColumnHeight(height);
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    if (oneBurlingtonColumnRef.current) {
+      const height = oneBurlingtonColumnRef.current.clientHeight;
+      setOneBurlingtonColumnHeight(height);
+    }
+  }, [oneBurlingtonColumnRef]);
 
   // breakpoints={[{ maxWidth: 'xs', cols: 1 }]}
 
@@ -97,32 +96,35 @@ function Portfolio() {
                     src={oneBurlingtonGif}
                     radius='md'
                     alt='One Burlington Redesign'
+                    height={matches ? oneBurlingtonColumnHeight : 'auto'}
                     withPlaceholder
                     placeholder={placeholder}
                   />
                 </Paper>
               </Grid.Col>
               <Grid.Col sm={3}>
-                <Group direction={matches ? 'column' : 'row'} noWrap>
-                  <Paper shadow='sm' radius='md'>
-                    <Image
-                      src={oldOneBurlingtonPng}
-                      radius='md'
-                      alt='Old One Burlington Logo'
-                      withPlaceholder
-                      placeholder={placeholder}
-                    />
-                  </Paper>
-                  <Paper shadow='sm' radius='md'>
-                    <Image
-                      src={oneBurlingtonPng}
-                      radius='md'
-                      alt='New Burlington Redesign'
-                      withPlaceholder
-                      placeholder={placeholder}
-                    />
-                  </Paper>
-                </Group>
+                <div ref={oneBurlingtonColumnRef}>
+                  <Group direction={matches ? 'column' : 'row'} noWrap>
+                    <Paper shadow='sm' radius='md'>
+                      <Image
+                        src={oldOneBurlingtonPng}
+                        radius='md'
+                        alt='Old One Burlington Logo'
+                        withPlaceholder
+                        placeholder={placeholder}
+                      />
+                    </Paper>
+                    <Paper shadow='sm' radius='md'>
+                      <Image
+                        src={oneBurlingtonPng}
+                        radius='md'
+                        alt='New Burlington Redesign'
+                        withPlaceholder
+                        placeholder={placeholder}
+                      />
+                    </Paper>
+                  </Group>
+                </div>
               </Grid.Col>
             </Grid>
           </div>
