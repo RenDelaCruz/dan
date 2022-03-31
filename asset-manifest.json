@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dan/static/css/main.317c3da2.css",
-    "main.js": "/dan/static/js/main.8d6add46.js",
+    "main.js": "/dan/static/js/main.6d42e086.js",
     "static/js/787.0537d1f0.chunk.js": "/dan/static/js/787.0537d1f0.chunk.js",
     "static/media/magdalena-mockups.png": "/dan/static/media/magdalena-mockups.cbb14e18d9dcbab6f7ec.png",
     "static/media/one-burlington.gif": "/dan/static/media/one-burlington.4c7c0359e02048273d4c.gif",
@@ -18,13 +18,20 @@
     "static/media/VAGRundschriftDLight.woff": "/dan/static/media/VAGRundschriftDLight.d1338cce148a0e8a8d81.woff",
     "static/media/dg-white.svg": "/dan/static/media/dg-white.d149b9cbfa4a4d7b7cb6ed4212dd456c.svg",
     "static/media/dg-black.svg": "/dan/static/media/dg-black.c1ceac2eaff8024d520795315e8f7789.svg",
+    "static/media/sq.svg": "/dan/static/media/sq.7f2e7b534af566d7571427d5ff9670c6.svg",
+    "static/media/xd.svg": "/dan/static/media/xd.a9cbd42f708ed8a25d68490cd846fe85.svg",
+    "static/media/ps.svg": "/dan/static/media/ps.8d81e364833e1a1d0668d22e9f1aea31.svg",
+    "static/media/ae.svg": "/dan/static/media/ae.0b601dc288052747224747cc1e107c65.svg",
+    "static/media/ai.svg": "/dan/static/media/ai.554b57f554e9d5aacc62c1d96fd64e57.svg",
+    "static/media/pr.svg": "/dan/static/media/pr.4109b43db99840b96af5f9d239d4b224.svg",
+    "static/media/id.svg": "/dan/static/media/id.83a5c093435510ce5c24b80520b80ff9.svg",
     "index.html": "/dan/index.html",
     "main.317c3da2.css.map": "/dan/static/css/main.317c3da2.css.map",
-    "main.8d6add46.js.map": "/dan/static/js/main.8d6add46.js.map",
+    "main.6d42e086.js.map": "/dan/static/js/main.6d42e086.js.map",
     "787.0537d1f0.chunk.js.map": "/dan/static/js/787.0537d1f0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.317c3da2.css",
-    "static/js/main.8d6add46.js"
+    "static/js/main.6d42e086.js"
   ]
 }
