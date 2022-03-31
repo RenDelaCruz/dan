@@ -1,10 +1,9 @@
 {
   "files": {
     "main.css": "/dan/static/css/main.317c3da2.css",
-    "main.js": "/dan/static/js/main.84565690.js",
+    "main.js": "/dan/static/js/main.077c2678.js",
     "static/js/787.0537d1f0.chunk.js": "/dan/static/js/787.0537d1f0.chunk.js",
     "static/media/magdalena-mockups.png": "/dan/static/media/magdalena-mockups.cbb14e18d9dcbab6f7ec.png",
-    "static/media/one-burlington.gif": "/dan/static/media/one-burlington.4c7c0359e02048273d4c.gif",
     "static/media/imaginable.png": "/dan/static/media/imaginable.0e19286160e514189d1a.png",
     "static/media/spill-the-beans.png": "/dan/static/media/spill-the-beans.44bdf22c68de5674dc52.png",
     "static/media/portrait.png": "/dan/static/media/portrait.bca0bc3a5dbbe7e445b0.png",
@@ -13,7 +12,6 @@
     "static/media/safety-drives-us.png": "/dan/static/media/safety-drives-us.b92ecc6acdac5460d7cb.png",
     "static/media/DanialEndrawes_Resume.pdf": "/dan/static/media/DanialEndrawes_Resume.15e75b433f9707d92cb7.pdf",
     "static/media/clip.png": "/dan/static/media/clip.afdba7933d85b34c746f.png",
-    "static/media/old-one-burlington.png": "/dan/static/media/old-one-burlington.087b6d04134c53bae77f.png",
     "static/media/VAGRundschriftD.woff": "/dan/static/media/VAGRundschriftD.40f21a57b21f8bdc58b7.woff",
     "static/media/VAGRundschriftDLight.woff": "/dan/static/media/VAGRundschriftDLight.d1338cce148a0e8a8d81.woff",
     "static/media/dg-white.svg": "/dan/static/media/dg-white.d149b9cbfa4a4d7b7cb6ed4212dd456c.svg",
@@ -27,11 +25,11 @@
     "static/media/id.svg": "/dan/static/media/id.83a5c093435510ce5c24b80520b80ff9.svg",
     "index.html": "/dan/index.html",
     "main.317c3da2.css.map": "/dan/static/css/main.317c3da2.css.map",
-    "main.84565690.js.map": "/dan/static/js/main.84565690.js.map",
+    "main.077c2678.js.map": "/dan/static/js/main.077c2678.js.map",
     "787.0537d1f0.chunk.js.map": "/dan/static/js/787.0537d1f0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.317c3da2.css",
-    "static/js/main.84565690.js"
+    "static/js/main.077c2678.js"
   ]
 }
