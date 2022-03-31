@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dan/static/css/main.317c3da2.css",
-    "main.js": "/dan/static/js/main.6d42e086.js",
+    "main.js": "/dan/static/js/main.659ff820.js",
     "static/js/787.0537d1f0.chunk.js": "/dan/static/js/787.0537d1f0.chunk.js",
     "static/media/magdalena-mockups.png": "/dan/static/media/magdalena-mockups.cbb14e18d9dcbab6f7ec.png",
     "static/media/one-burlington.gif": "/dan/static/media/one-burlington.4c7c0359e02048273d4c.gif",
@@ -27,11 +27,11 @@
     "static/media/id.svg": "/dan/static/media/id.83a5c093435510ce5c24b80520b80ff9.svg",
     "index.html": "/dan/index.html",
     "main.317c3da2.css.map": "/dan/static/css/main.317c3da2.css.map",
-    "main.6d42e086.js.map": "/dan/static/js/main.6d42e086.js.map",
+    "main.659ff820.js.map": "/dan/static/js/main.659ff820.js.map",
     "787.0537d1f0.chunk.js.map": "/dan/static/js/787.0537d1f0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.317c3da2.css",
-    "static/js/main.6d42e086.js"
+    "static/js/main.659ff820.js"
   ]
 }
