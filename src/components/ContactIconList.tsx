@@ -1,4 +1,5 @@
 import { Box, createStyles, Group, Text, ThemeIcon, UnstyledButton } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 import React from 'react';
 import { At, BrandLinkedin, BrandYoutube, Phone } from 'tabler-icons-react';
 
@@ -52,6 +53,7 @@ function ContactIcon({
   className,
   ...others
 }: ContactIconProps) {
+  const matches = useMediaQuery('(min-width: 414px)');
   const { classes, cx } = useStyles({ variant });
   return (
     <UnstyledButton
@@ -65,22 +67,24 @@ function ContactIcon({
       }}
     >
       <div className={cx(classes.wrapper, className)} {...others}>
-        {variant === 'gradient' ? (
-          <ThemeIcon size={40} radius='md' className={classes.icon}>
-            <Icon size={24} />
-          </ThemeIcon>
-        ) : (
-          <Box mr='md'>
-            <Icon size={24} />
-          </Box>
-        )}
+        <Group direction={matches ? 'row' : 'column'} spacing='xs'>
+          {variant === 'gradient' ? (
+            <ThemeIcon size={40} radius='md' className={classes.icon}>
+              <Icon size={24} />
+            </ThemeIcon>
+          ) : (
+            <Box mr='md'>
+              <Icon size={24} />
+            </Box>
+          )}
 
-        <div>
-          <Text size='xs' className={classes.title}>
-            {title}
-          </Text>
-          <Text className={classes.description}>{description}</Text>
-        </div>
+          <div>
+            <Text size='xs' className={classes.title}>
+              {title}
+            </Text>
+            <Text className={classes.description}>{description}</Text>
+          </div>
+        </Group>
       </div>
     </UnstyledButton>
   );

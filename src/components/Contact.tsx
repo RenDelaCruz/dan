@@ -24,6 +24,7 @@ const useStyles = createStyles(theme => ({
     } 100%)`,
     borderRadius: theme.radius.md,
     padding: theme.spacing.xl * 2.5,
+    overflow: 'hidden',
 
     [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
       padding: theme.spacing.xl * 1.5,
