@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dan/static/css/main.317c3da2.css",
-    "main.js": "/dan/static/js/main.ccc36557.js",
+    "main.css": "/dan/static/css/main.3d376a2f.css",
+    "main.js": "/dan/static/js/main.77b3df53.js",
     "static/js/787.0537d1f0.chunk.js": "/dan/static/js/787.0537d1f0.chunk.js",
     "static/media/magdalena-mockups.png": "/dan/static/media/magdalena-mockups.cbb14e18d9dcbab6f7ec.png",
     "static/media/imaginable.png": "/dan/static/media/imaginable.0e19286160e514189d1a.png",
@@ -24,12 +24,12 @@
     "static/media/pr.svg": "/dan/static/media/pr.4109b43db99840b96af5f9d239d4b224.svg",
     "static/media/id.svg": "/dan/static/media/id.83a5c093435510ce5c24b80520b80ff9.svg",
     "index.html": "/dan/index.html",
-    "main.317c3da2.css.map": "/dan/static/css/main.317c3da2.css.map",
-    "main.ccc36557.js.map": "/dan/static/js/main.ccc36557.js.map",
+    "main.3d376a2f.css.map": "/dan/static/css/main.3d376a2f.css.map",
+    "main.77b3df53.js.map": "/dan/static/js/main.77b3df53.js.map",
     "787.0537d1f0.chunk.js.map": "/dan/static/js/787.0537d1f0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.317c3da2.css",
-    "static/js/main.ccc36557.js"
+    "static/css/main.3d376a2f.css",
+    "static/js/main.77b3df53.js"
   ]
 }
