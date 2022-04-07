@@ -28,7 +28,7 @@ const useStyles = createStyles(theme => ({
 
 interface SectionProps {
   noPadding?: boolean;
-  children: string;
+  children: string | React.ReactNode;
 }
 
 function SectionTitle({ noPadding, children }: SectionProps) {
