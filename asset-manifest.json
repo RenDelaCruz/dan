@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dan/static/css/main.21bfc907.css",
-    "main.js": "/dan/static/js/main.0f7d952e.js",
+    "main.js": "/dan/static/js/main.c486fd2e.js",
     "reactPlayerYouTube.js": "/dan/static/js/reactPlayerYouTube.1ed8f2c6.chunk.js",
     "reactPlayerSoundCloud.js": "/dan/static/js/reactPlayerSoundCloud.a80609c0.chunk.js",
     "reactPlayerVimeo.js": "/dan/static/js/reactPlayerVimeo.dee7d16f.chunk.js",
@@ -28,9 +28,8 @@
     "static/media/safety-drives-us.png": "/dan/static/media/safety-drives-us.b92ecc6acdac5460d7cb.png",
     "static/media/safety-drives-us-2.png": "/dan/static/media/safety-drives-us-2.f01b980ba437ca979d5e.png",
     "static/media/magdalena-logos.png": "/dan/static/media/magdalena-logos.458f282461ad357a5336.png",
-    "static/media/DanialEndrawes_Resume.pdf": "/dan/static/media/DanialEndrawes_Resume.15e75b433f9707d92cb7.pdf",
+    "static/media/DanialEndrawes_Resume.pdf": "/dan/static/media/DanialEndrawes_Resume.df8758caedf934f44d84.pdf",
     "static/media/imaginable.gif": "/dan/static/media/imaginable.5fdc71d6ae2eeac64c3d.gif",
-    "static/media/magdalena.gif": "/dan/static/media/magdalena.9beb1717d37a4bd99df3.gif",
     "static/media/clip.png": "/dan/static/media/clip.afdba7933d85b34c746f.png",
     "static/media/old-one-burlington.png": "/dan/static/media/old-one-burlington.087b6d04134c53bae77f.png",
     "static/media/VAGRundschriftD.woff": "/dan/static/media/VAGRundschriftD.40f21a57b21f8bdc58b7.woff",
@@ -47,7 +46,7 @@
     "static/media/id.svg": "/dan/static/media/id.83a5c093435510ce5c24b80520b80ff9.svg",
     "index.html": "/dan/index.html",
     "main.21bfc907.css.map": "/dan/static/css/main.21bfc907.css.map",
-    "main.0f7d952e.js.map": "/dan/static/js/main.0f7d952e.js.map",
+    "main.c486fd2e.js.map": "/dan/static/js/main.c486fd2e.js.map",
     "reactPlayerYouTube.1ed8f2c6.chunk.js.map": "/dan/static/js/reactPlayerYouTube.1ed8f2c6.chunk.js.map",
     "reactPlayerSoundCloud.a80609c0.chunk.js.map": "/dan/static/js/reactPlayerSoundCloud.a80609c0.chunk.js.map",
     "reactPlayerVimeo.dee7d16f.chunk.js.map": "/dan/static/js/reactPlayerVimeo.dee7d16f.chunk.js.map",
@@ -65,6 +64,6 @@
   },
   "entrypoints": [
     "static/css/main.21bfc907.css",
-    "static/js/main.0f7d952e.js"
+    "static/js/main.c486fd2e.js"
   ]
 }
