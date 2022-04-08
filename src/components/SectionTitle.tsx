@@ -22,7 +22,7 @@ const useStyles = createStyles(theme => ({
   line: {
     color: theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 8 : 6],
     borderRadius: 5,
-    border: '1px solid',
+    border: 'solid',
   },
 }));
 
@@ -36,9 +36,9 @@ function SectionTitle({ noPadding, children }: SectionProps) {
 
   return (
     <div className={noPadding ? classes.noPadding : classes.title}>
-      <Divider className={classes.line} />
+      <Divider size='lg' className={classes.line} />
       <h1 style={{ marginTop: 1, marginBottom: 1 }}>{children}</h1>
-      <Divider className={classes.line} />
+      <Divider size='lg' className={classes.line} />
     </div>
   );
 }

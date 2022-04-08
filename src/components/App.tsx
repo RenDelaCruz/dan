@@ -7,8 +7,9 @@ import {
   Image,
   MantineProvider,
 } from '@mantine/core';
-import React, { useState } from 'react';
-import clipPng from '../assets/clip.png';
+import Cookies from 'js-cookie';
+import React, { useEffect, useState } from 'react';
+import clipSvg from '../assets/clip.svg';
 import fontNormal from '../assets/VAGRundschriftD.woff';
 import fontLight from '../assets/VAGRundschriftDLight.woff';
 import Contact from './Contact';
@@ -26,7 +27,7 @@ const useStyles = createStyles(theme => ({
   },
 
   dark: {
-    filter: 'grayscale(100%) brightness(0.7)',
+    filter: 'brightness(0.2)',
   },
 
   light: {
@@ -66,8 +67,16 @@ const useStyles = createStyles(theme => ({
 function App() {
   const [colorScheme, setColorScheme] = useState<ColorScheme>('light');
   const { classes, cx } = useStyles();
+
+  useEffect(() => {
+    const savedColorScheme = Cookies.get('mantine-color-scheme') === 'light' ? 'light' : 'dark';
+    setColorScheme(savedColorScheme);
+  }, []);
+
   const toggleColorScheme = (value?: ColorScheme) => {
-    setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
+    const savedColorScheme = value || (colorScheme === 'dark' ? 'light' : 'dark');
+    setColorScheme(savedColorScheme);
+    Cookies.set('mantine-color-scheme', savedColorScheme, { expires: 14 });
   };
 
   return (
@@ -107,10 +116,10 @@ function App() {
           className={classes.wrapper}
         >
           <Image
-            src={clipPng}
+            src={clipSvg}
             className={cx(
               classes.clip,
-              colorScheme === 'dark' ? classes.dark : classes.light,
+              colorScheme === 'dark' ? classes.dark : undefined,
               'spinner'
             )}
           />

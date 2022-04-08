@@ -1,5 +1,4 @@
 import {
-  ActionIcon,
   Button,
   Container,
   createStyles,
@@ -10,8 +9,7 @@ import {
   TextInput,
   Title,
 } from '@mantine/core';
-import React from 'react';
-import { BrandInstagram, BrandTwitter, BrandYoutube } from 'tabler-icons-react';
+import React, { useState } from 'react';
 import ContactIconsList from './ContactIconList';
 import SectionTitle from './SectionTitle';
 
@@ -80,16 +78,10 @@ const useStyles = createStyles(theme => ({
   },
 }));
 
-const social = [BrandTwitter, BrandYoutube, BrandInstagram];
-
 function Contact() {
   const { classes } = useStyles();
-
-  const icons = social.map((Icon, index) => (
-    <ActionIcon key={index} size={28} className={classes.social} variant='transparent'>
-      <Icon size={22} />
-    </ActionIcon>
-  ));
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
 
   return (
     <Container id='contact' size={900}>
@@ -107,29 +99,38 @@ function Contact() {
             {/* <Group mt='xl'>{icons}</Group> */}
           </div>
           <div className={classes.form}>
-            <TextInput
+            {/* <TextInput
               label='Email'
               // placeholder='your@email.com'
               required
               classNames={{ input: classes.input, label: classes.inputLabel }}
-            />
+            /> */}
             <TextInput
               label='Subject'
               // placeholder='Title'
               mt='md'
               classNames={{ input: classes.input, label: classes.inputLabel }}
+              value={subject}
+              onChange={event => setSubject(event.currentTarget.value)}
             />
             <Textarea
-              required
+              // required
               label='Message'
               // placeholder="Let's talk!"
               minRows={4}
               mt='md'
               classNames={{ input: classes.input, label: classes.inputLabel }}
+              value={message}
+              onChange={event => setMessage(event.currentTarget.value)}
             />
-
             <Group position='right' mt='md'>
-              <Button className={classes.control}>Send message</Button>
+              <Button
+                className={classes.control}
+                component='a'
+                href={`mailto:danialendrawes@gmail.com?subject=${subject}&body=${message}`}
+              >
+                Send message
+              </Button>
             </Group>
           </div>
         </SimpleGrid>

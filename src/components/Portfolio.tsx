@@ -2,7 +2,6 @@ import {
   ActionIcon,
   Center,
   Container,
-  createStyles,
   Grid,
   Group,
   Image,
@@ -10,7 +9,6 @@ import {
   Modal,
   Paper,
   ScrollArea,
-  Skeleton,
   Tooltip,
   useMantineTheme,
 } from '@mantine/core';
@@ -18,12 +16,11 @@ import { useMediaQuery } from '@mantine/hooks';
 import { ButtonBack, ButtonNext, CarouselProvider, Dot, Slide, Slider } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import React, { useState } from 'react';
+import ReactPlayer from 'react-player/lazy';
 import { ArrowLeft, ArrowRight, InfoCircle } from 'tabler-icons-react';
 import imaginableMockupPng from '../assets/modal/imaginable-mockup.png';
-import imaginableGif from '../assets/modal/imaginable.gif';
 import magdalenaIntroPng from '../assets/modal/magdalena-intro.png';
 import magdalenaLogosPng from '../assets/modal/magdalena-logos.png';
-import magdalenaGif from '../assets/modal/magdalena.gif';
 import oldOneBurlingtonPng from '../assets/modal/old-one-burlington.png';
 import portraitGif from '../assets/modal/portrait.gif';
 import safetyDrivesUs2Png from '../assets/modal/safety-drives-us-2.png';
@@ -39,36 +36,6 @@ import spillTheBeansPng from '../assets/portfolio/spill-the-beans.png';
 import ContextCard from './ContextCard';
 import SectionTitle from './SectionTitle';
 
-function vwToPixels(viewWidth: number): number {
-  return document.documentElement.clientWidth * (viewWidth / 100);
-}
-
-function pixelsToVw(pixels: number): number {
-  return (pixels * 100) / document.documentElement.clientWidth;
-}
-
-const useStyles = createStyles(theme => ({
-  sameHeight: {
-    gridAutoRows: '1fr',
-  },
-
-  bordered: {
-    border: `3px solid ${
-      theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2]
-    }`,
-    borderRadius: theme.radius.md,
-  },
-
-  notDraggable: {
-    userDrag: 'none',
-    userSelect: 'none',
-    MozUserSelect: 'none',
-    WebkitUserDrag: 'none',
-    WebkitUserSelect: 'none',
-    MsUserSelect: 'none',
-  },
-}));
-
 function DotGrouping({ count, matches }: { count: number; matches: boolean }) {
   let dots = [];
   for (let i = 0; i < count; i++) {
@@ -80,13 +47,10 @@ function DotGrouping({ count, matches }: { count: number; matches: boolean }) {
   return <Group spacing={matches ? 10 : 3}>{dots}</Group>;
 }
 
-const child = <Skeleton sx={{ zIndex: 0 }} height={350} radius='md' animate={false} />;
-
 const placeholder = <Loader variant='bars' />; //<Skeleton radius='md' />;
 
 function Portfolio() {
   const matches = useMediaQuery('(min-width: 770px)');
-  const { classes } = useStyles();
   const theme = useMantineTheme();
 
   const [opened, setOpened] = useState({
@@ -129,12 +93,17 @@ function Portfolio() {
         size={matches ? '70%' : '95%'}
         opened={opened.oneBurlington}
         onClose={() => setOpened({ ...opened, oneBurlington: false })}
-        centered
       >
         <div style={{ paddingTop: 0, paddingBottom: 0, paddingLeft: '2vw', paddingRight: '2vw' }}>
           <input type='hidden' data-autofocus />
           <SectionTitle noPadding>One Burlington Logo Redesign</SectionTitle>
-          <CarouselProvider naturalSlideWidth={16} naturalSlideHeight={9} totalSlides={2} infinite>
+          <CarouselProvider
+            naturalSlideWidth={16}
+            naturalSlideHeight={9}
+            totalSlides={2}
+            infinite
+            isIntrinsicHeight
+          >
             <Slider>
               <Slide index={0}>
                 <Paper shadow='sm' radius='md'>
@@ -196,12 +165,23 @@ function Portfolio() {
         size={matches ? '70%' : '95%'}
         opened={opened.galaxyBites}
         onClose={() => setOpened({ ...opened, galaxyBites: false })}
-        centered
       >
         <div style={{ paddingTop: 0, paddingBottom: 0, paddingLeft: '2vw', paddingRight: '2vw' }}>
           <input type='hidden' data-autofocus />
           <SectionTitle noPadding>Galaxy Bites Logo & Animation</SectionTitle>
           <Paper shadow='sm' radius='md' className='iframe-container'>
+            <ReactPlayer
+              className='responsive-iframe'
+              url='https://i.imgur.com/YDYcdgn.mp4'
+              loop
+              muted
+              playing
+              width='100%'
+              height='100%'
+              style={{ borderRadius: theme.spacing.sm, overflow: 'hidden' }}
+            />
+          </Paper>
+          {/* <Paper shadow='sm' radius='md' className='iframe-container'>
             <iframe
               className='responsive-iframe'
               src='https://www.youtube.com/embed/DmxdVQ1exIs?controls=0&version=3&loop=1&playlist=DmxdVQ1exIs'
@@ -210,7 +190,7 @@ function Portfolio() {
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
               allowFullScreen
             ></iframe>
-          </Paper>
+          </Paper> */}
           <ContextCard programIconCodes={['ai', 'ae']} />
         </div>
       </Modal>
@@ -218,7 +198,6 @@ function Portfolio() {
         size={matches ? '70%' : '95%'}
         opened={opened.safetyDrivesUs}
         onClose={() => setOpened({ ...opened, safetyDrivesUs: false })}
-        centered
       >
         <div style={{ paddingTop: 0, paddingBottom: 0, paddingLeft: '2vw', paddingRight: '2vw' }}>
           <input type='hidden' data-autofocus />
@@ -286,7 +265,6 @@ function Portfolio() {
         size={matches ? '70%' : '95%'}
         opened={opened.imaginable}
         onClose={() => setOpened({ ...opened, imaginable: false })}
-        centered
       >
         <div style={{ paddingTop: 0, paddingBottom: 0, paddingLeft: '2vw', paddingRight: '2vw' }}>
           <input type='hidden' data-autofocus />
@@ -305,7 +283,7 @@ function Portfolio() {
               <Slide index={0}>
                 <Paper shadow='sm' radius='md'>
                   <Image
-                    src={imaginableGif}
+                    src={'https://i.imgur.com/PyGYZLo.gif'}
                     radius='md'
                     alt='ImaginAble Logo Animation'
                     withPlaceholder
@@ -363,7 +341,6 @@ function Portfolio() {
         size={matches ? '70%' : '95%'}
         opened={opened.portrait}
         onClose={() => setOpened({ ...opened, portrait: false })}
-        centered
       >
         <div style={{ paddingTop: 0, paddingBottom: 0, paddingLeft: '2vw', paddingRight: '2vw' }}>
           <input type='hidden' data-autofocus />
@@ -372,7 +349,7 @@ function Portfolio() {
             <Grid.Col sm={6}>
               <Paper shadow='sm' radius='md'>
                 <Image
-                  src={portraitGif}
+                  src={'https://i.imgur.com/yOJqRz4.gif'}
                   radius='md'
                   alt='Portrait Animation'
                   height='100%'
@@ -401,7 +378,6 @@ function Portfolio() {
         size={matches ? '70%' : '95%'}
         opened={opened.magdalena}
         onClose={() => setOpened({ ...opened, magdalena: false })}
-        centered
       >
         <div style={{ paddingTop: 0, paddingBottom: 0, paddingLeft: '2vw', paddingRight: '2vw' }}>
           <input type='hidden' data-autofocus />
@@ -420,7 +396,7 @@ function Portfolio() {
               <Slide index={0}>
                 <Paper shadow='sm' radius='md'>
                   <Image
-                    src={magdalenaGif}
+                    src='https://i.imgur.com/eTYQfQV.gif'
                     radius='md'
                     alt='Magdalena Logo Animation'
                     withPlaceholder
@@ -480,8 +456,8 @@ function Portfolio() {
           </CarouselProvider>
           <ContextCard
             programIconCodes={['ai', 'ae', 'id']}
-            buttonLink='/'
-            buttonText='View Presentation (make publish[!])'
+            buttonLink='https://onedrive.live.com/view.aspx?resid=D7386AEC8580F07D!2627&ithint=file%2cpptx&authkey=!AKAXu4xzFcDGgAc'
+            buttonText='View Presentation'
           />
         </div>
       </Modal>
@@ -489,7 +465,6 @@ function Portfolio() {
         size={matches ? '70%' : '95%'}
         opened={opened.channel}
         onClose={() => setOpened({ ...opened, channel: false })}
-        centered
       >
         <div style={{ paddingTop: 0, paddingBottom: 0, paddingLeft: '2vw', paddingRight: '2vw' }}>
           <input type='hidden' data-autofocus />
@@ -514,7 +489,6 @@ function Portfolio() {
         size={matches ? '70%' : '95%'}
         opened={opened.spillTheBeans}
         onClose={() => setOpened({ ...opened, spillTheBeans: false })}
-        centered
       >
         <div style={{ paddingTop: 0, paddingBottom: 0, paddingLeft: '2vw', paddingRight: '2vw' }}>
           <input type='hidden' data-autofocus />

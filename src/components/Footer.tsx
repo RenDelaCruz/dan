@@ -82,7 +82,7 @@ function Footer() {
           <div style={{ textAlign: 'center' }}>
             <Text>© Danial Endrawes 2022.</Text>
             <Text>
-              Made with mantine.dev by{' '}
+              Made by{' '}
               <Anchor href='https://github.com/RenDelaCruz' target='_blank'>
                 RDC
               </Anchor>
@@ -92,7 +92,7 @@ function Footer() {
         </MediaQuery>
         <MediaQuery smallerThan='xs' styles={{ display: 'none' }}>
           <Text>
-            © Danial Endrawes 2022. Made with mantine.dev by{' '}
+            © Danial Endrawes 2022. Made by{' '}
             <Anchor href='https://github.com/RenDelaCruz' target='_blank'>
               RDC
             </Anchor>
