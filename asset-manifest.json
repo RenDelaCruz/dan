@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dan/static/css/main.21bfc907.css",
-    "main.js": "/dan/static/js/main.c486fd2e.js",
+    "main.js": "/dan/static/js/main.0e54e297.js",
     "reactPlayerYouTube.js": "/dan/static/js/reactPlayerYouTube.1ed8f2c6.chunk.js",
     "reactPlayerSoundCloud.js": "/dan/static/js/reactPlayerSoundCloud.a80609c0.chunk.js",
     "reactPlayerVimeo.js": "/dan/static/js/reactPlayerVimeo.dee7d16f.chunk.js",
@@ -30,11 +30,11 @@
     "static/media/magdalena-logos.png": "/dan/static/media/magdalena-logos.458f282461ad357a5336.png",
     "static/media/DanialEndrawes_Resume.pdf": "/dan/static/media/DanialEndrawes_Resume.df8758caedf934f44d84.pdf",
     "static/media/imaginable.gif": "/dan/static/media/imaginable.5fdc71d6ae2eeac64c3d.gif",
-    "static/media/clip.png": "/dan/static/media/clip.afdba7933d85b34c746f.png",
     "static/media/old-one-burlington.png": "/dan/static/media/old-one-burlington.087b6d04134c53bae77f.png",
     "static/media/VAGRundschriftD.woff": "/dan/static/media/VAGRundschriftD.40f21a57b21f8bdc58b7.woff",
     "static/media/magdalena-intro.png": "/dan/static/media/magdalena-intro.f05795dc0fd2ce6bd8d6.png",
     "static/media/VAGRundschriftDLight.woff": "/dan/static/media/VAGRundschriftDLight.d1338cce148a0e8a8d81.woff",
+    "static/media/clip.svg": "/dan/static/media/clip.307af698906a7eac109dd02ca9cd21d5.svg",
     "static/media/dg-white.svg": "/dan/static/media/dg-white.d149b9cbfa4a4d7b7cb6ed4212dd456c.svg",
     "static/media/dg-black.svg": "/dan/static/media/dg-black.c1ceac2eaff8024d520795315e8f7789.svg",
     "static/media/sq.svg": "/dan/static/media/sq.7f2e7b534af566d7571427d5ff9670c6.svg",
@@ -46,7 +46,7 @@
     "static/media/id.svg": "/dan/static/media/id.83a5c093435510ce5c24b80520b80ff9.svg",
     "index.html": "/dan/index.html",
     "main.21bfc907.css.map": "/dan/static/css/main.21bfc907.css.map",
-    "main.c486fd2e.js.map": "/dan/static/js/main.c486fd2e.js.map",
+    "main.0e54e297.js.map": "/dan/static/js/main.0e54e297.js.map",
     "reactPlayerYouTube.1ed8f2c6.chunk.js.map": "/dan/static/js/reactPlayerYouTube.1ed8f2c6.chunk.js.map",
     "reactPlayerSoundCloud.a80609c0.chunk.js.map": "/dan/static/js/reactPlayerSoundCloud.a80609c0.chunk.js.map",
     "reactPlayerVimeo.dee7d16f.chunk.js.map": "/dan/static/js/reactPlayerVimeo.dee7d16f.chunk.js.map",
@@ -64,6 +64,6 @@
   },
   "entrypoints": [
     "static/css/main.21bfc907.css",
-    "static/js/main.c486fd2e.js"
+    "static/js/main.0e54e297.js"
   ]
 }
